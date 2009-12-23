@@ -24,4 +24,10 @@ public class Point3D {
         this.y = y;
         this.z = z;
     }
+
+    public void set(int newX, int newY, int newZ) {
+        this.x = newX;
+        this.y = newY;
+        this.z = newZ;
+    }
 }
