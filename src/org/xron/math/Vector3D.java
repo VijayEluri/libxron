@@ -6,7 +6,6 @@ package org.xron.math;
  */
 public class Vector3D {
 
-
     public double x;
     public double y;
     public double z;
@@ -16,8 +15,6 @@ public class Vector3D {
         this.y = 0;
         this.z = 0;
     }
-
-
 
     public Vector3D(double x, double y, double z) {
         this.x = x;
@@ -31,11 +28,23 @@ public class Vector3D {
         this.z = newZ;
     }
 
-    public void rotate(Vector3D up, int rads) {
-        throw new UnsupportedOperationException("Not yet implemented");
+    public double magnitude() {
+        return Math.sqrt(x * x + y * y + z * z);
     }
 
+    public void normalize() {
+        double magnitude = magnitude();
+        this.x /= magnitude;
+        this.y /= magnitude;
+        this.z /= magnitude;
+    }
 
+    public void rotate(Vector3D up, int rads) {
+        //TODO: Check parameters for errors
+
+        //TODO: See below!
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
     // Below is some C# code that I need to port
 //            /// <summary>
 //        /// Rotates the vector around an arbitrary axis.
