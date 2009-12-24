@@ -31,6 +31,10 @@ public class Vector3D {
         this.z = newZ;
     }
 
+    public void rotate(Vector3D up, int rads) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
 
     // Below is some C# code that I need to port
 //            /// <summary>
