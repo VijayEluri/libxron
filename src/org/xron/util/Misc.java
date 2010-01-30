@@ -9,7 +9,7 @@ package org.xron.util;
  *
  * @author Ben Page
  */
-public class Extra {
+public class Misc {
 
     /**
      * Wrapper around Java's Thread.sleep(), ignores the exception thrown.
