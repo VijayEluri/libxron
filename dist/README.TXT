@@ -1,3 +1,4 @@
+This library was authored by Ben Page.
 ========================
 BUILD OUTPUT DESCRIPTION
 ========================
@@ -13,8 +14,8 @@ type the following:
 
 java -jar "libxron.jar" 
 
-To distribute this project, zip up the dist folder (including the lib folder)
-and distribute the ZIP file.
+libxron.jar when run as above will behave randomly, as libxron is not a 
+standalone program, it is a supporting library.
 
 Notes:
 
