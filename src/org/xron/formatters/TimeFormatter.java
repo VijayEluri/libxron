@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package org.xron.formatters;
 
 /**
@@ -28,6 +24,7 @@ public class TimeFormatter {
         System.out.println(TimeFormatter.formatToHHMMSS(60));
         System.out.println(TimeFormatter.formatToHHMMSS(65));
         System.out.println(TimeFormatter.formatToHHMMSS(3600));
+        System.out.println(TimeFormatter.formatToHHMMSS(150));
         System.out.println(TimeFormatter.formatToHHMMSS(3750));
     }
 }
