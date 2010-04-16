@@ -39,6 +39,16 @@ public class Vector3D {
         this.z /= magnitude;
     }
 
+    public void add(double x, double y, double z) {
+        this.x += x;
+        this.y += y;
+        this.z += z;
+    }
+
+    public void add(Vector3D v) {
+        this.add(v.x,v.y,v.z);
+    }
+
     public void rotate(Vector3D up, int rads) {
         //TODO: Check parameters for errors
 
