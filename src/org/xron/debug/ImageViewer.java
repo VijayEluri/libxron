@@ -5,6 +5,7 @@
 
 package org.xron.debug;
 
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
 import org.xron.game.GameFrame;
@@ -44,6 +45,13 @@ public class ImageViewer extends Model {
     public static void show(Image i){
         new ImageViewer(i).show();
     }
+
+    @Override
+    public Dimension getViewportSize() {
+        return new Dimension(width, height);
+    }
+
+
 
 
 
