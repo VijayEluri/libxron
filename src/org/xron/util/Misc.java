@@ -22,10 +22,16 @@ public class Misc {
         try {
             Thread.sleep(millis);
         } catch (InterruptedException x) {
-            System.err.println("WARNING: Ignored exception in org.xron.util.Extra.sleep");
+            System.err.println("WARNING: Ignored InterupptedException in libxron:sleep2");
         }
     }
 
+    /**
+     * 
+     * @param c color to alpharize
+     * @param alpha 0--1 percentage of alpha
+     * @return
+     */
     public static Color alpharize(Color c, float alpha) {
         return new Color(c.getRed(), c.getGreen(), c.getBlue(), (int) (alpha * 255));
     }

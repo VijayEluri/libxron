@@ -1,7 +1,7 @@
 package org.xron.util;
 
 /**
- *
+ * New object starts timing (or reset) stop stops the time
  * @author Ben Page [ug73bxp@cs.bham.ac.uk]
  */
 public class Stopwatch {
