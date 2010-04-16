@@ -23,8 +23,12 @@ public class GetLine {
     }
 
     public void pause() {
+        pause("[PRESS ENTER TO CONTINUE]");
+    }
+
+    public void pause(String msg) {
         try {
-            System.out.println("[PRESS ENTER TO CONTINUE]");
+            System.out.println(msg);
             in.readLine();
         } catch (IOException ex) {
             System.out.println("INFO: libxron GetLine.pause Ignored exception: " + ex);
