@@ -5,6 +5,7 @@
 package org.xron.debug;
 
 import java.io.PrintStream;
+import java.util.List;
 
 /**
  *
@@ -78,5 +79,16 @@ public class ArrayPrinter {
 
     public static void useStream(PrintStream x) {
         out = x;
+    }
+
+    public static String listToString(List x){
+        StringBuilder sb = new StringBuilder('[');
+        for (Object o : x) {
+            sb.append(o).append(", ");
+        }
+        sb.delete(sb.length()-2, sb.length());
+        sb.append(']');
+
+        return sb.toString();
     }
 }
