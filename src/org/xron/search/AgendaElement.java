@@ -11,6 +11,13 @@ public interface AgendaElement extends Comparable<AgendaElement> {
 
     int compareTo(AgendaElement that);
 
+    /**
+     * True if the two agenda elements have the same result.
+     * (regardless of path)
+     *
+     * @param that
+     * @return
+     */
     boolean matches(AgendaElement that);
 
     List<AgendaElement> getSuccessors();
