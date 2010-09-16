@@ -8,13 +8,16 @@ import java.util.TreeSet;
  *
  * @author Ben Page [ug73bxp@cs.bham.ac.uk]
  */
-public class BestFirstAgenda implements Agenda {
+public class BestFirstAgenda<K extends AgendaElement> implements Agenda<K> {
 
-    private TreeSet<AgendaElement> agenda;
+    private TreeSet<K> agenda;
     private final AgendaElement goal;
 
+    //TODO: The Tree set needs to be ordered according to how close
+    //      to 'goal' each element in the agenda is.
+
     public BestFirstAgenda(AgendaElement goal) {
-        agenda = new TreeSet<AgendaElement>();
+        agenda = new TreeSet<K>();
         this.goal = goal;
     }
 
@@ -22,31 +25,37 @@ public class BestFirstAgenda implements Agenda {
      * Best first agenda makes sure each element added to the array is added
      * @param toAdd
      */
-    public void add(AgendaElement... toAdd) {
+    @Override
+    public void add(K... toAdd) {
         // Add array elems to list
-        for (AgendaElement x : toAdd) {
+        for (K x : toAdd) {
             agenda.add(x);
         }
 
 //        Collections.sort(agenda);
     }
 
-    public void addAll(List<AgendaElement> toAdd) {
+    @Override
+    public void addAll(List<K> toAdd) {
         agenda.addAll(toAdd);
     }
 
-    public AgendaElement peek() {
+    @Override
+    public K peek() {
         return agenda.first();
     }
 
-    public AgendaElement pop() {
+    @Override
+    public K pop() {
         return agenda.pollFirst();
     }
 
+    @Override
     public int size() {
         return agenda.size();
     }
 
+    @Override
     public boolean isEmpty() {
         return agenda.isEmpty();
     }
