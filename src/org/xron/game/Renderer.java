@@ -46,4 +46,15 @@ public class Renderer {
         g.drawLine(x - crossWidth, y + crossWidth, x + crossWidth, y - crossWidth);
         g.drawLine(x - crossWidth, y - crossWidth, x + crossWidth, y + crossWidth);
     }
+
+    public static void filledMark(int x, int y, Color c, Graphics g) {
+        g.setColor(c);
+        int r = 4;
+        g.fillOval(x - r, y - r, r * 2, r * 2);
+
+        // Draw a cross in the circle
+        int crossWidth = r;
+        g.drawLine(x - crossWidth, y + crossWidth, x + crossWidth, y - crossWidth);
+        g.drawLine(x - crossWidth, y - crossWidth, x + crossWidth, y + crossWidth);
+    }
 }
