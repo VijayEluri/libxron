@@ -21,9 +21,13 @@ public class MinMaxAvg extends MinMax {
         return sum / numElems;
     }
 
+    public double getSum() {
+        return sum;
+    }
+
     @Override
     public String toString() {
-        return super.toString() + "\tAvg: "+getAvg();
+        return super.toString() + "\tSum: " + getSum() + "\tAvg: "+getAvg();
     }
 
 
