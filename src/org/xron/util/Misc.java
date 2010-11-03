@@ -4,8 +4,6 @@
  */
 package org.xron.util;
 
-import java.awt.Color;
-
 /**
  *
  * @author Ben Page
@@ -22,17 +20,7 @@ public class Misc {
         try {
             Thread.sleep(millis);
         } catch (InterruptedException x) {
-            System.err.println("WARNING: Ignored InterupptedException in libxron:sleep2");
+            System.err.println("WARNING: Ignored InterruptedException in libxron:sleep2");
         }
-    }
-
-    /**
-     * 
-     * @param c color to alpharize
-     * @param alpha 0--1 percentage of alpha
-     * @return
-     */
-    public static Color alpharize(Color c, float alpha) {
-        return new Color(c.getRed(), c.getGreen(), c.getBlue(), (int) (alpha * 255));
     }
 }
