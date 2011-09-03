@@ -31,7 +31,7 @@ public class ColorSequence {
 
     public Color getColor() {
         double currHue = seq.next();
-        return org.xron.util.Graphics.HSVtoRGB((float) currHue, 0.5f, 0.95f);
+        return org.xron.util.Graphics.HSVtoRGB((float) currHue, saturation, value);
     }
 
     /**
