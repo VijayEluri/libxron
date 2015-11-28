@@ -1,62 +1,61 @@
 package org.xron.math;
 
 /**
- *
  * @author ben
  */
 public class Vector3D {
 
-    public double x;
-    public double y;
-    public double z;
+  public double x;
+  public double y;
+  public double z;
 
-    public Vector3D() {
-        this.x = 0;
-        this.y = 0;
-        this.z = 0;
-    }
+  public Vector3D() {
+    this.x = 0;
+    this.y = 0;
+    this.z = 0;
+  }
 
-    public Vector3D(double x, double y, double z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-    }
+  public Vector3D(double x, double y, double z) {
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  }
 
-    public void set(int newX, int newY, int newZ) {
-        this.x = newX;
-        this.y = newY;
-        this.z = newZ;
-    }
+  public void set(int newX, int newY, int newZ) {
+    this.x = newX;
+    this.y = newY;
+    this.z = newZ;
+  }
 
-    public double magnitude() {
-        return Math.sqrt(x * x + y * y + z * z);
-    }
+  public double magnitude() {
+    return Math.sqrt(x * x + y * y + z * z);
+  }
 
-    public void normalize() {
-        double magnitude = magnitude();
-        this.x /= magnitude;
-        this.y /= magnitude;
-        this.z /= magnitude;
-    }
+  public void normalize() {
+    double magnitude = magnitude();
+    this.x /= magnitude;
+    this.y /= magnitude;
+    this.z /= magnitude;
+  }
 
-    public void add(double x, double y, double z) {
-        this.x += x;
-        this.y += y;
-        this.z += z;
-    }
+  public void add(double x, double y, double z) {
+    this.x += x;
+    this.y += y;
+    this.z += z;
+  }
 
-    public void add(Vector3D v) {
-        this.add(v.x,v.y,v.z);
-    }
+  public void add(Vector3D v) {
+    this.add(v.x, v.y, v.z);
+  }
 
 
   public void rotate(Vector3D up, int rads) {
-        //TODO: Check parameters for errors
+    //TODO: Check parameters for errors
 
-        //TODO: See below!
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
-    // Below is some C# code that I need to port
+    //TODO: See below!
+    throw new UnsupportedOperationException("Not yet implemented");
+  }
+  // Below is some C# code that I need to port
 //            /// <summary>
 //        /// Rotates the vector around an arbitrary axis.
 //        /// </summary>

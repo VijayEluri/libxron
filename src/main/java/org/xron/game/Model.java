@@ -10,22 +10,20 @@ import java.awt.Graphics;
 import java.awt.event.MouseAdapter;
 
 /**
- *
  * @author ben
  */
 public abstract class Model extends MouseAdapter {
 
-    abstract public void draw(Graphics g);
+  abstract public void draw(Graphics g);
 
-    abstract public void update();
+  abstract public void update();
 
-    /**
-     *
-     * @return requested size of the window
-     */
-    //TODO: make this abstract
-    public Dimension getViewportSize() {
-        return new Dimension(640,480);
-    }
+  /**
+   * @return requested size of the window
+   */
+  //TODO: make this abstract
+  public Dimension getViewportSize() {
+    return new Dimension(640, 480);
+  }
 
 }

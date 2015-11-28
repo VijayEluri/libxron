@@ -8,51 +8,48 @@ package org.xron.debug;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
+
 import org.xron.game.GameFrame;
 import org.xron.game.GamePanel;
 import org.xron.game.Model;
 
 /**
- *
  * @author ben
  */
 public class ImageViewer extends Model {
 
-    private final Image image;
-    private final int width;
-    private final int height;
+  private final Image image;
+  private final int width;
+  private final int height;
 
-    public ImageViewer(Image x) {
-        image = x;
-        width = x.getWidth(null);
-        height = x.getHeight(null);
-    }
+  public ImageViewer(Image x) {
+    image = x;
+    width = x.getWidth(null);
+    height = x.getHeight(null);
+  }
 
-    @Override
-    public void draw(Graphics g) {
-        g.drawImage(image, 0, 0, null);
-    }
+  public static void show(Image i) {
+    new ImageViewer(i).show();
+  }
 
-    @Override
-    public void update() {
-        // No update
-    }
+  @Override
+  public void draw(Graphics g) {
+    g.drawImage(image, 0, 0, null);
+  }
 
-    public void show(){
-        new GameFrame(new GamePanel(this));
-    }
+  @Override
+  public void update() {
+    // No update
+  }
 
-    public static void show(Image i){
-        new ImageViewer(i).show();
-    }
+  public void show() {
+    new GameFrame(new GamePanel(this));
+  }
 
-    @Override
-    public Dimension getViewportSize() {
-        return new Dimension(width, height);
-    }
-
-
-
+  @Override
+  public Dimension getViewportSize() {
+    return new Dimension(width, height);
+  }
 
 
 }
