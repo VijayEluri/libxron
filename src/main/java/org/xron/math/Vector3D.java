@@ -49,7 +49,8 @@ public class Vector3D {
         this.add(v.x,v.y,v.z);
     }
 
-    public void rotate(Vector3D up, int rads) {
+
+  public void rotate(Vector3D up, int rads) {
         //TODO: Check parameters for errors
 
         //TODO: See below!

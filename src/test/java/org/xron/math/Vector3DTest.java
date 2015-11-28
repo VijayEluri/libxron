@@ -2,6 +2,7 @@ package org.xron.math;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -65,7 +66,7 @@ public class Vector3DTest {
     /**
      * Test of rotate method, of class Vector3D.
      */
-    @Test
+    @Test @Ignore // Not implemented
     public void testRotate() {
         System.out.println("rotate");
         Vector3D up = null;
